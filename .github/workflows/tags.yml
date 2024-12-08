@@ -1,4 +1,4 @@
-name: forms
+name: tags
 
 on:
   workflow_dispatch:
