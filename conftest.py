@@ -26,6 +26,6 @@ def driver():
     driver.quit()
 
 
-# @pytest.hookimpl(trylast=True)
-# def pytest_sessionfinish(session, exitstatus):
-#     bot.send_message(chat_id, "О какие то тесты на стэйдж прошли, посмотри, вдруг они в отчете - https://101internettests.github.io/autotests/")
+@pytest.hookimpl(trylast=True)
+def pytest_sessionfinish(session, exitstatus):
+    bot.send_message(chat_id, "О какие то тесты на стэйдж прошли, посмотри, вдруг они в отчете - https://101internettests.github.io/stage_autotests/#")
